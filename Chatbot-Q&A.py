@@ -22,7 +22,7 @@ max_tokens = st.sidebar.slider("Select Max Tokens (response length)", min_value=
 #Import Langchain_groq LLM Model
 from langchain_groq import ChatGroq
 llm= ChatGroq(
-   model="gemma2-9b-it",
+   model="llama-3.1-8b-instant",
    groq_api_key=groq_api_key,
    temperature=temperature,
    max_tokens=max_tokens)
@@ -51,7 +51,7 @@ def generate_response(question):
 
 
 
-st.title("Q&A Chatbot With Gemma Model")
+st.title("Q&A Chatbot With Llama 3.1 Model")
 
 input_text=st.text_input("Go ahead and ask any question")
 
